@@ -1,0 +1,16 @@
+{
+  "name": "simplified/session",
+  "description": "Simplified session module",
+  "license":"MIT",
+  "authors": [
+    {
+      "name": "Andreas Bratfisch",
+      "email": "duskman72@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Simplified\\Session\\":"src/"
+    }
+  }
+}
