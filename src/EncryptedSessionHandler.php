@@ -49,10 +49,12 @@ class EncryptedSessionHandler extends SessionHandler {
 
     public function read($id) {
         $data = parent::read($id);
-        return $data;
+        $returnValue = strlen($data) > 0 ? decrypt($data, $this->key) : "";
+        return $returnValue;
     }
 
     public function write($id, $data) {
+        $data = encrypt($data, $this->key);
         return parent::write($id, $data);
     }
 }

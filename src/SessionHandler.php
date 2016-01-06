@@ -23,10 +23,12 @@ class SessionHandler implements \SessionHandlerInterface {
     }
 
     public function read($session_id) {
+        $data = "";
+        $this->sessionpath = STORAGE_PATH . "session";
         if (file_exists($this->sessionpath . DIRECTORY_SEPARATOR . $session_id))
-            return file_get_contents($this->sessionpath . DIRECTORY_SEPARATOR . $session_id);
+            $data = file_get_contents($this->sessionpath . DIRECTORY_SEPARATOR . $session_id);
 
-        return "";
+        return $data;
     }
 
     public function write($session_id, $data) {
