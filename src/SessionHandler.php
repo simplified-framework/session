@@ -13,7 +13,6 @@ class SessionHandler implements \SessionHandlerInterface {
     private $sessionpath;
     public function __construct() {
         // set session save path to app/storage/session
-        // TODO load it from session config
         $this->sessionpath = STORAGE_PATH . "session";
         session_save_path($this->sessionpath);
 
