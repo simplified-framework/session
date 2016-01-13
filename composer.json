@@ -11,6 +11,9 @@
   "autoload": {
     "psr-4": {
       "Simplified\\Session\\":"src/"
-    }
+    },
+    "files": [
+      "src/Session.php"
+    ]
   }
 }
